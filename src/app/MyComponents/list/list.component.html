@@ -1,0 +1,20 @@
+Name <input type="text" name="name" id="name" [(ngModel)]='selectedMovies.name'>
+STD <input type="text" name="std" id="std" [(ngModel)]='selectedMovies.std'><br>
+<button (click)="updateMovie()"> Update </button>
+<button (click)="deleteMovie()"> Delete </button>
+
+
+
+<table class="table" border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <!-- <th>STD</th> -->
+
+  </tr>
+  <tr *ngFor="let movie of movies">
+    <td>{{movie.id}}</td>
+    <td (click)="studentClicked(movie)">{{movie.name}}</td>
+    <!-- <td>{{movie.std}}</td> -->
+  </tr>
+</table>
